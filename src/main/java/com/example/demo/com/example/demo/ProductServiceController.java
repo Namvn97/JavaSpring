@@ -105,7 +105,7 @@ public class ProductServiceController {
 		System.out.println("Kết thúc tạo mới ");
 		return new ResponseEntity<Object>("Product is created successsfully", HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/setStyleExcel/{empNo}", method = RequestMethod.POST, produces = {
 			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
@@ -114,12 +114,12 @@ public class ProductServiceController {
 		System.out.println("Set style successsfully");
 		return new ResponseEntity<Object>("Set style successsfully", HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/mergeCell", method = RequestMethod.POST, produces = {
 			MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	@ResponseBody
 	public void mergeCell() throws IOException {
 		excel.mergeCell();
 	}
-	
+
 }
